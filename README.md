@@ -22,47 +22,32 @@ See important security warnings in
 Building
 --------
 
-Currently only Linux is officially supported.
-Requires at least 8GB RAM.
+Currently only Linux is officially supported. Requires at least 8GB RAM. Sequence of commands is:
 
-
+```
 sudo apt-get install \
+build-essential pkg-config libc6-dev m4 g++-multilib \
+autoconf libtool ncurses-dev unzip git python \
+zlib1g-dev wget bsdmainutils automake
 
-      build-essential pkg-config libc6-dev m4 g++-multilib \
-
-      autoconf libtool ncurses-dev unzip git python \
-
-      zlib1g-dev wget bsdmainutils automake
-
-
-git clone https://github.com/zerocurrency/zero.git
-
+git clone https://github.com/zerodev2/zero.git
 cd zero
-
 git checkout master
 
 ./zcutil/fetch-params.sh
-
 ./zcutil/build.sh -j$(nproc)
 
 mkdir -p ~/.zero
-
 echo "rpcuser=username" > ~/.zero/zero.conf
-
 echo "rpcpassword=`head -c 32 /dev/urandom | base64`" >> ~/.zero/zero.conf
-
 echo "addnode=35.164.216.74" >> ~/.zero/zero.conf
-
 echo "addnode=35.165.120.254" >> ~/.zero/zero.conf
-
 echo "rpcport=23800" >> ~/.zero/zero.conf
-
 echo 'gen=1' >> ~/.zero/zero.conf
-
 echo "genproclimit=$(nproc)" >> ~/.zero/zero.conf
-
 echo 'equihashsolver=tromp' >> ~/.zero/zero.conf
+```
 
-
-
-
+Running & Using ZERO
+--------
+The usage is currently the same as for ZCash. For more information see the [ZCash User Guide](https://github.com/zcash/zcash/wiki/1.0-User-Guide#running-zcash).
