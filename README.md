@@ -5,7 +5,7 @@ What is ZERO?
 --------------
 
 [ZERO](https://github.com/zerodev2/zero) is a [cryptocurrency](https://en.wikipedia.org/wiki/Cryptocurrency) with advanced privacy features. 
-It is a fork of Zcash that is a fork of Bitcoin. The ZERO client spftware downloads and stores the entire history
+It is a fork of Zcash that is a fork of Bitcoin. The ZERO client software downloads and stores the entire history
 of ZERO transactions; depending on the speed of your computer and network connection, the synchronization process
 could take a day or more once the blockchain has reached a significant size. [ZERO](https://github.com/zerodev2/zero)
 supports two kinds of addresses:
@@ -37,7 +37,7 @@ cd zero
 git checkout master
 ```
 
-* Download cryptographice keys (needs to be done once)
+* Download cryptographic keys (needs to be done once only)
 ```
 ./zcutil/fetch-params.sh
 ```
@@ -63,6 +63,9 @@ echo 'equihashsolver=tromp' >> ~/.zero/zero.conf
 
 After following the build & install steps you will have ZERO ready for use (probably) in folder `~/.zero/src`. The two important binary executables are `zcashd` and `zcash-cli`.
 
+The default configuration in `~/.zero/zero.conf` has mining enabled. When mining you're helping to strengthen the network and contributing to a social good :) 
+Mining ZERO may take up to 3 GB per CPU available. If the available memory is not sufficient for this, you may disable mining by setting the option `gen=1`
+or you may reduce the number of CPUs that are mining e.g. `genproclimit=1` means mining with 1 CPU only.
 
 Running & Using ZERO
 --------------------
