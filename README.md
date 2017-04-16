@@ -64,7 +64,7 @@ echo 'equihashsolver=tromp' >> ~/.zero/zero.conf
 After following the build & install steps you will have ZERO ready for use (probably) in folder `~/.zero/src`. The two important binary executables are `zcashd` and `zcash-cli`.
 
 The default configuration in `~/.zero/zero.conf` has mining enabled. When mining you're helping to strengthen the network and contributing to a social good :) 
-Mining ZERO may take up to 3 GB per CPU available. If the available memory is not sufficient for this, you may disable mining by setting the option `gen=1`
+Mining ZERO may take up to 3 GB per CPU available. If the available memory is not sufficient for this, you may disable mining by setting the option `gen=0`
 or you may reduce the number of CPUs that are mining e.g. `genproclimit=1` means mining with 1 CPU only.
 
 Running & Using ZERO
